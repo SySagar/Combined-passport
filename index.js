@@ -83,9 +83,7 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ facebookId: profile.id }, function (err, user) {
-      return cb(err, user);
-    });
+  res.send("facebook login succesfull")
   }
 ));
 
